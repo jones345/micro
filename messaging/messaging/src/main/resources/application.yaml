@@ -1,0 +1,29 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: messaging
+
+  # --  Java mail configs --
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: netlinkmanager@gmail.com
+    password: rehsybrntksrdvna
+
+    # -- Other properties --
+    properties:
+      mail:
+        debug: true
+        smtp:
+          auth: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+
+          ## TLS , port 587
+          starttls:
+            enable: true
+
+server:
+  port: 8300
